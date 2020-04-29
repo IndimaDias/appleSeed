@@ -1,10 +1,10 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +16,6 @@
     "express-fileupload": "^1.1.7-alpha.3",
     "mongoose": "^5.9.5",
     "node-sessionstorage": "^1.0.0"
-  }
+  },
+  "description": ""
 }

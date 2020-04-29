@@ -13,6 +13,10 @@ app.use(cors());
 app.use(express.json());
 app.use(fileUpload());
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("/sa/build"));
+  }
+  
 const uri = process.env.ATLAS_URI;
 console.log(uri);
 mongoose.connect(uri, { useNewUrlParser:true, useCreateIndex: true });
@@ -35,3 +39,5 @@ app.use('/image', imageRouter);
 app.listen(port, () => {
     console.log('Server is running on port ' + port);
 });
+
+//ATLAS_URI=mongodb+srv://bswainbank:llamazmdb1@cluster0-fgdma.mongodb.net/test?retryWrites=true&w=majority
