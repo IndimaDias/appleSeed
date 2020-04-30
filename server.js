@@ -30,11 +30,11 @@ connection.once('open', () => {
     console.log("MongoDB database connection established successfully");
 })
 
-const businessRouter  = require('./routes/business');
+const businessRouter  = require('../appleSeed/routes/business');
 //const imageRouter  = require('./routes/Image');
 
 app.use('/business', businessRouter);
-app.use('/image', imageRouter);
+//app.use('/image', imageRouter);
 
 app.listen(port, () => {
     console.log('Server is running on port ' + port);
