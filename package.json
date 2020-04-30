@@ -6,6 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",  
     "start": "node server.js"
   },
+  "cacheDirectories": ["client/node_modules", "server/node_modules"],
   "keywords": [],
   "author": "",
   "license": "ISC",
