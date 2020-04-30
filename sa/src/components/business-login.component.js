@@ -46,7 +46,8 @@ export default class BusinessLogin extends Component {
             password: this.state.password
         }
         
-        axios.post('http://localhost:5000/business/login/', user)
+       // axios.post('http://localhost:5000/business/login/', user)
+       axios.post('/routes/business/login', user)
             .then(res=> {
                 console.log(res.data)
                 window.location = '/edit/' + res.data;
