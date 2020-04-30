@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(fileUpload());
 
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("/sa/build"));
+    app.use(express.static("./sa/build"));
   }
   
 const uri = process.env.ATLAS_URI;
@@ -30,7 +30,7 @@ connection.once('open', () => {
     console.log("MongoDB database connection established successfully");
 })
 
-const businessRouter  = require('../appleSeed/routes/business');
+const businessRouter  = require('./routes/business');
 //const imageRouter  = require('./routes/Image');
 
 app.use('/business', businessRouter);
