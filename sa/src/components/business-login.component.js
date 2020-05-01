@@ -51,7 +51,7 @@ export default class BusinessLogin extends Component {
             .then(res=> {
                 console.log(res.data);
                 // window.location = '/edit/' + res.data;
-                window.open("/edit" , "_self");
+                window.open("/edit?pageId = 'IndisCollection'" , "_self");
 
             })
             .catch((error) => {
