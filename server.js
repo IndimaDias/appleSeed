@@ -31,7 +31,7 @@ connection.once('open', () => {
 })
 
 const businessRouter  = require('./routes/business');
-const imageRouter  = require('./routes/Image');
+const imageRouter  = require('./routes/image');
 
 app.use('/business', businessRouter);
 app.use('/image', imageRouter);
