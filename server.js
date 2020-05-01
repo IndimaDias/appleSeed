@@ -31,10 +31,10 @@ connection.once('open', () => {
 })
 
 const businessRouter  = require('./routes/business');
-//const imageRouter  = require('./routes/Image');
+const imageRouter  = require('./routes/Image');
 
 app.use('/business', businessRouter);
-//app.use('/image', imageRouter);
+app.use('/image', imageRouter);
 
 app.listen(port, () => {
     console.log('Server is running on port ' + port);
