@@ -307,7 +307,7 @@ export default class BusinessAdd extends Component {
         const formData = new FormData();
         formData.append('file', this.state.uploadFile);
 
-        axios.post('http://localhost:5000/image/upload', formData, {
+        axios.post('/image/upload', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             },
@@ -383,7 +383,7 @@ export default class BusinessAdd extends Component {
     
         console.log(business);
 
-        axios.post('http://localhost:5000/business/add/', business)
+        axios.post('/business/add/', business)
             .then(res=> {
                 console.log(res.data)
                 window.location = '/edit/' + business.pageId;

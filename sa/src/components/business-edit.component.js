@@ -89,7 +89,7 @@ export default class BusinessEdit extends Component {
 
     componentDidMount() {
 
-        axios.get('http://localhost:5000/business/load/' + this.props.match.params.pageId)
+        axios.get('/business/load/' + this.props.match.params.pageId)
             .then(response => {
                console.log(response.data);
 
@@ -355,7 +355,7 @@ export default class BusinessEdit extends Component {
         const formData = new FormData();
         formData.append('file', this.state.uploadFile);
 
-        axios.post('http://localhost:5000/image/upload', formData, {
+        axios.post('/image/upload', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             },
@@ -431,7 +431,7 @@ export default class BusinessEdit extends Component {
     
         console.log(business);
 
-        axios.post('http://localhost:5000/business/update/' + this.state.id, business)
+        axios.post('/business/update/' + this.state.id, business)
             .then(res=> {
                 console.log(res.data)
                 //this.setSetSate({uploadFileId : res.data})
