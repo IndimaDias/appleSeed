@@ -49,9 +49,9 @@ export default class BusinessLogin extends Component {
     //    axios.post('http://localhost:5000/business/login/', user)
        axios.post('/business/login/', user)
             .then(res=> {
-                console.log(res.data)
+                console.log(res.data);
                 // window.location = '/edit/' + res.data;
-                window.open("/edit/" + res.data, "_self");
+                window.open("/edit" , "_self");
 
             })
             .catch((error) => {
