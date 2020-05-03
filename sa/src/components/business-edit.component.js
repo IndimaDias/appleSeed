@@ -88,7 +88,6 @@ export default class BusinessEdit extends Component {
 
 
     componentDidMount() {
-console.log(this.props.match.params.pageId);
         axios.get('/business/load/' + this.props.match.params.pageId)
             .then(response => {
                console.log(response.data);
@@ -445,7 +444,9 @@ console.log(this.props.match.params.pageId);
     }
 
     render() {
+        console.log(this.props.match.params.pageId);
         return (
+            
         <div className = 'container-edit'>
 
             <div className = 'container'>
