@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(fileUpload());
 
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("./sa/build/static"));
+    app.use(express.static("sa/build"));
   }
   
 const uri = process.env.ATLAS_URI;
