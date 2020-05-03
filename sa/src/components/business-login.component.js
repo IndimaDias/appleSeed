@@ -51,7 +51,7 @@ export default class BusinessLogin extends Component {
             .then(res=> {
                 console.log(res.data);
                  window.location = 'edit/' + res.data;
-               window.open("BusinessEdit/" + res.data , "_self");
+            //    window.open("BusinessEdit/" + res.data , "_self");
 
             })
             .catch((error) => {
