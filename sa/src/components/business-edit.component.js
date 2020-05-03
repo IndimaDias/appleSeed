@@ -88,7 +88,7 @@ export default class BusinessEdit extends Component {
 
 
     componentDidMount() {
-
+console.log(this.props.match.params.pageId);
         axios.get('/business/load/' + this.props.match.params.pageId)
             .then(response => {
                console.log(response.data);
