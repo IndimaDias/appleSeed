@@ -51,7 +51,7 @@ export default class BusinessLogin extends Component {
             .then(res=> {
                 console.log(res.data);
                 //  window.location = 'edit/' + res.data;
-               window.open("/BusinessEdit", "_self");
+            //    window.open("/BusinessEdit", "_self");
                
               this.props.history.push('/edit/'+ res.data); // <--- The page you want to redirect your user to.
 
