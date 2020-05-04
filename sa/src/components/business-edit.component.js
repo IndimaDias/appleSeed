@@ -46,7 +46,7 @@ export default class BusinessEdit extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state= {
-            id: '',
+            id: this.props.match.params.pageId,
             username: '',
             password: '',
             pageId: '',
