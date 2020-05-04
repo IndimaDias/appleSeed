@@ -444,7 +444,7 @@ export default class BusinessEdit extends Component {
     }
 
     render() {
-        console.log(this.props.match.params.pageId);
+       
         return (
             
         <div className = 'container-edit'>
