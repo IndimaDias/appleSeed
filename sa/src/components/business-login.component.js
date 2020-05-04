@@ -57,8 +57,8 @@ export default class BusinessLogin extends Component {
 
             })
             .catch((error) => {
-                console.log("ERR" + error.response.data);
-                this.setState({errorMessage : error.response.data});
+                console.log( error);
+                // this.setState({errorMessage : error.response.data});
             });
     }
 
