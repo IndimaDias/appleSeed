@@ -51,14 +51,14 @@ export default class BusinessLogin extends Component {
             .then(res=> {
                 console.log(res.data);
                 //  window.location = 'edit/' + res.data;
-               //window.open("/edit/" + res.data, "_self");
-                   window.location.assign('/edit/'+ res.data);
-            //   this.props.history.push('/edit/'+ res.data); // <--- The page you want to redirect your user to.
+            //    window.open("/edit/" + res.data, "_self");
+                //    window.location.assign('/edit/'+ res.data);
+              this.props.history.push('/edit/'+ res.data); // <--- The page you want to redirect your user to.
 
             })
             .catch((error) => {
-                console.log( error);
-                // this.setState({errorMessage : error.response.data});
+                console.log( error.response.data);
+                this.setState({errorMessage : error.response.data});
             });
     }
 

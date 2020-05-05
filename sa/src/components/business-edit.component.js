@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { withRouter } from "react-router-dom";
 import './css/business-edit.components.css';
 import axios from 'axios';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faImages, faImage } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faImages, faImage } from '@fortawesome/free-solid-svg-icons'
 
     class BusinessEdit extends Component {
     constructor(props) {
@@ -813,4 +812,4 @@ import { faImages, faImage } from '@fortawesome/free-solid-svg-icons'
 
 }
 
-export default withRouter (BusinessEdit);
+export default BusinessEdit;
