@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
-
+const path = require('path');
 
 require('dotenv').config();
 
@@ -14,10 +14,10 @@ app.use(express.json());
 app.use(fileUpload());
 
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("sa/build"));
+    app.use(express.static(path.join(__dirname, 'client/build')));
   }
   
-const uri = process.env.ATLAS_URI;
+const uri = process.env.HEROKU_URI||process.env.ATLAS_URI;
 console.log(uri);
 mongoose.connect(uri, { useNewUrlParser:true, useCreateIndex: true });
 // .catch(err => {
