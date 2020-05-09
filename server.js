@@ -13,9 +13,20 @@ app.use(cors());
 app.use(express.json());
 app.use(fileUpload());
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, 'client/build')));
-  }
+const businessRouter  = require('./routes/business');
+const imageRouter  = require('./routes/image');
+
+app.use('/business', businessRouter);
+app.use('/image', imageRouter);
+
+
+//if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname,'sa/build')));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'sa', 'build', 'index.html'));
+    });
+//}
   
 const uri = process.env.HEROKU_URI||process.env.ATLAS_URI;
 console.log(uri);
@@ -30,11 +41,6 @@ connection.once('open', () => {
     console.log("MongoDB database connection established successfully");
 })
 
-const businessRouter  = require('./routes/business');
-const imageRouter  = require('./routes/image');
-
-app.use('/business', businessRouter);
-app.use('/image', imageRouter);
 
 app.listen(port, () => {
     console.log('Server is running on port ' + port);

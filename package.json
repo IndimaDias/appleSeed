@@ -25,5 +25,8 @@
     "mongoose": "^5.9.5",
     "node-sessionstorage": "^1.0.0"
   },
-  "description": ""
+  "description": "",
+  "engines": {
+    "node": "12.16.1"
+  }
 }
