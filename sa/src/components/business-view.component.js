@@ -234,7 +234,7 @@ export default class BusinessView extends Component {
 
     componentDidMount() {
         
-        axios.get('http://localhost:5000/business/' + this.props.match.params.pageId)
+        axios.get('/business/' + this.props.match.params.pageId)
             .then(response => {
                this.setState({ business: response.data});
                
